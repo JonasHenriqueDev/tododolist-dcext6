@@ -31,7 +31,7 @@ public class TaskService {
         if (existingTask.isPresent()) {
             Task t = existingTask.get();
             t.setTitle(task.getTitle());
-            t.setDesc(task.getDesc());
+            t.setDescription(task.getDescription());
             t.setFinished(task.isFinished());
             return taskRepository.save(t);
         }

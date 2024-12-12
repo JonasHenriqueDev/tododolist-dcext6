@@ -14,6 +14,6 @@ public class Task {
     private Long id;
 
     private String title;
-    private String desc;
+    private String description;
     private boolean finished;
 }
