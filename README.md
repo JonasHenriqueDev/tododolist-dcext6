@@ -1,54 +1,51 @@
 
-----------
-# Utilizando GitHub Copilot no IntelliJ
+# 🚀 Utilizando GitHub Copilot no IntelliJ  
 
-## O que é o GitHub Copilot?
+## 🤖 O que é o GitHub Copilot?  
 
-### Introdução
+### Introdução  
 
--   Ferramenta de assistência ao código baseada em IA, desenvolvida pela OpenAI e GitHub.
--   Gera sugestões de código em tempo real com base no contexto.
+- Ferramenta de assistência ao código baseada em IA, desenvolvida pela OpenAI e GitHub.  
+- Gera sugestões de código em tempo real com base no contexto.  
 
-### Benefícios
+### Benefícios  
 
--   Acelera o desenvolvimento.
--   Reduz erros comuns.
--   Auxilia na escrita de código em linguagens menos familiares.
+- Acelera o desenvolvimento.  
+- Reduz erros comuns.  
+- Auxilia na escrita de código em linguagens menos familiares.  
 
-----------
+---  
 
-## O que vamos fazer?
+## O que vamos fazer?  
 
-Nesta demonstração, iremos adicionar uma nova funcionalidade em um projeto de lista de tarefas.
+Nesta demonstração, iremos adicionar uma nova funcionalidade em um projeto de lista de tarefas.  
 
-Resumo dos passos a serem seguidos:
+**Resumo dos passos:**  
 
-1.  Clonar o repositório.
-2.  Instalar e habilitar o plugin do GitHub Copilot no IntelliJ.
-3.  Realizar login com sua conta do GitHub no plugin.
-4.  Obter o código das funcionalidades a partir de prompts.
+1. Clonar o repositório.  
+2. Instalar e habilitar o plugin do GitHub Copilot no IntelliJ.  
+3. Realizar login com sua conta do GitHub no plugin.  
+4. Obter o código das funcionalidades a partir de prompts.  
 
-### Ferramentas Necessárias
+### Ferramentas Necessárias  
 
--   IntelliJ IDEA (Community ou Ultimate).
--   Plugin GitHub Copilot instalado.
--   JDK 17 ou superior.
--   Clonar o repositório de exemplo: [https://github.com/JonasHenriqueDev/tododolist-dcext6.git](https://github.com/JonasHenriqueDev/tododolist-dcext6.git)
+- IntelliJ IDEA (Community ou Ultimate).  
+- Plugin GitHub Copilot instalado.  
+- JDK 17 ou superior.  
+- Repositório de exemplo: [https://github.com/JonasHenriqueDev/tododolist-dcext6.git](https://github.com/JonasHenriqueDev/tododolist-dcext6.git)  
 
-----------
+---  
 
-## Desenvolvendo a funcionalidade
+## Desenvolvendo a funcionalidade  
 
-### Lista de Tarefas
+### Lista de Tarefas  
 
-1.  No IntelliJ, pressione a seguinte sequência de teclas para abrir o chat: **Ctrl + Shift + C**.
-    
-2.  Para este exemplo, definimos o seguinte prompt. Sinta-se livre para pedir qualquer outra coisa!
-    
+1. No IntelliJ, pressione **Ctrl + Shift + C** para abrir o chat.  
+2. Defina o seguinte prompt:  
 
-> Adicione uma nova feature para marcar uma tarefa como concluída.
+**Prompt:** Adicione uma nova feature para marcar uma tarefa como concluída.  
 
-Resposta:
+**Resposta:**  
 
 ```java
 // src/main/java/br/upe/todolist/service/TaskService.java  
@@ -62,7 +59,6 @@ public Task completeTask(Long id) {
     }  
     return null;  
 }
-
 ```
 
 ```java
@@ -76,23 +72,22 @@ public ResponseEntity<Task> completeTask(@PathVariable Long id) {
     }  
     return ResponseEntity.notFound().build();  
 }
-
 ```
 
-3.  Execute o projeto para garantir que está funcionando.
+3. Execute o projeto para garantir que está funcionando.  
 
-### BÔNUS! Gerando testes com o GitHub Copilot
+---  
 
-Desenvolver testes unitários pode ser uma tarefa que demanda bastante tempo do desenvolvedor, mas, com a chegada das IAs, tais tarefas podem ser facilitadas.
+### Bônus: Gerando testes com o GitHub Copilot  
 
-1.  No IntelliJ, pressione a seguinte sequência de teclas para abrir o chat: **Ctrl + Shift + C**.
-    
-2.  Para gerar um teste de alguma classe, você pode escrever algo como este prompt:
-    
+Desenvolver testes unitários pode ser uma tarefa demorada, mas as IAs ajudam a simplificar esse processo.  
 
-> /tests TaskController
+1. No IntelliJ, pressione **Ctrl + Shift + C**.  
+2. Prompt para gerar testes:  
 
-Resposta:
+**Prompt:** /tests TaskController  
+
+**Resposta:**  
 
 ```java
 package br.upe.todolist.controller;  
@@ -152,30 +147,31 @@ class TaskControllerTest {
         verify(taskService, times(1)).completeTask(taskId);  
     }  
 }
+```  
 
-```
+3. Execute o projeto para validar.  
 
-3.  Execute o projeto para garantir que está funcionando.
+---  
 
-## Conclusão
+## Conclusão  
 
-### Benefícios Observados
+### Benefícios Observados  
 
--   Aceleração no desenvolvimento.
--   Redução de erros comuns.
--   Maior produtividade ao focar em regras de negócio.
+- Aceleração no desenvolvimento.  
+- Redução de erros comuns.  
+- Foco em regras de negócio.  
 
-### Dicas para Uso do GitHub Copilot
+### Dicas para Uso  
 
--   Combine sugestões da IA com revisões manuais.
--   Use para aprender padrões e boas práticas.
+- Combine as sugestões da IA com revisões manuais.  
+- Use para aprender padrões e boas práticas.  
 
-----------
+---  
 
-## Recursos Adicionais
+## Recursos Adicionais  
 
--   [Documentação do GitHub Copilot](https://docs.github.com/en/copilot)
--   [Spring Boot](https://spring.io/projects/spring-boot)
--   [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+- [Documentação do GitHub Copilot](https://docs.github.com/en/copilot)  
+- [Spring Boot](https://spring.io/projects/spring-boot)  
+- [IntelliJ IDEA](https://www.jetbrains.com/idea/)  
 
-----------
+---  
